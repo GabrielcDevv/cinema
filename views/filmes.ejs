@@ -1,0 +1,20 @@
+<%-include("Partials/Header.ejs") %>
+<div>
+    <h1>
+        Films that i've watched
+    </h1>
+</div>
+<div class="filmes"> 
+    <% for(let filme of filmes) { %> 
+    <div class="fundo">
+    <h2><%= filme.title %></h2>
+    <img class="border" src="<%= filme.img  %> " >
+    <h3> O que eu achei:<br><%= filme.descr %></h3>
+    <h4>Nota: <%= filme.note%> de 10</h4>
+</div>
+    <% } %>
+    <form action="/submit" method="Get">
+    <button ><a class="change" href="/submit">Upload a new film</a></button>
+</form>
+</div>
+
